@@ -151,7 +151,35 @@ body {
 }
 
 .hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
     max-width: 700px;
+}
+
+.hero-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.05);
 }
 
 .hero-greeting {
@@ -788,8 +816,79 @@ body {
         font-size: 1.4rem;
     }
 
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "avatar"
+            "description"
+            "buttons"
+            "social";
+        gap: 1.5rem;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .hero-text {
+        display: contents;
+    }
+
+    .hero-title {
+        grid-area: title;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-title .hero-greeting {
+        font-size: 1rem;
+        opacity: 1;
+        display: block !important;
+        margin-bottom: 0.3rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+    }
+
+    .hero-title .hero-name {
+        font-size: 2rem;
+        line-height: 1.2;
+        display: block !important;
+        color: white;
+        font-weight: 700;
+    }
+
+    .hero-subtitle {
+        grid-area: subtitle;
+        margin-bottom: 0;
+    }
+
+    .hero-avatar {
+        grid-area: avatar;
+        margin: 0.5rem 0;
+    }
+
+    .hero-description {
+        grid-area: description;
+        margin-bottom: 0;
+    }
+
     .hero-buttons {
+        grid-area: buttons;
+        margin-bottom: 0;
         flex-direction: column;
+    }
+
+    .hero-social {
+        grid-area: social;
+    }
+
+    .avatar-image {
+        width: 200px;
+        height: 200px;
     }
 
     .section-title {
