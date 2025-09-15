@@ -353,3 +353,41 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+// Contact Form Submission via mailto
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const topic = document.getElementById('topic').value;
+            const message = document.getElementById('message').value;
+
+            if (!topic || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Construct mailto URL
+            const emailAddress = 'blarodin@gmail.com';
+            const subject = encodeURIComponent(`${topic} - Contact Form`);
+            const body = encodeURIComponent(`Hello Yevhenii,
+
+${message}
+
+Best regards`);
+
+            const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+
+            // Open default email client
+            window.location.href = mailtoUrl;
+
+            // Reset form after submission
+            setTimeout(() => {
+                contactForm.reset();
+            }, 1000);
+        });
+    }
+});
