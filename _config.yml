@@ -1,0 +1,76 @@
+# GitHub Pages Configuration
+title: "Yevhenii Rodin - Software Architect & Tech Lead"
+description: "Experienced Software Architect with 24+ years in enterprise-scale cloud-native solutions, AI/ML platforms, and high-load systems architecture"
+url: "https://blarodin.github.io"
+baseurl: "/public"
+
+# Author information
+author:
+  name: "Yevhenii Rodin"
+  email: "blarodin@gmail.com"
+  linkedin: "https://linkedin.com/in/yevhenii-rodin"
+  github: "https://github.com/blarodin"
+
+# SEO and social media
+lang: en
+timezone: Europe/London
+
+# GitHub Pages settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .git
+  - .github
+  - .claude
+
+# Include files that start with underscores
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "Yevhenii Rodin"
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Sass settings
+sass:
+  style: compressed
+
+# Site verification (add your verification codes here when available)
+# google_site_verification: ""
+# bing_site_verification: ""
+
+# Analytics (uncomment and add your tracking ID when ready)
+# google_analytics: ""
+
+# Social media profiles
+social:
+  name: "Yevhenii Rodin"
+  links:
+    - "https://linkedin.com/in/yevhenii-rodin"
+    - "https://github.com/blarodin"
