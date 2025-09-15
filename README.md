@@ -65,10 +65,10 @@ A modern, responsive portfolio website showcasing the professional experience an
 
 ```bash
 # Clone the repository
-git clone https://github.com/blarodin/web-site.git
+git clone https://github.com/blarodin/public.git
 
 # Navigate to project directory
-cd web-site
+cd public
 
 # Open index.html in your browser
 # or use a local server like Live Server in VS Code
@@ -89,7 +89,7 @@ jekyll serve
 ## 📁 Project Structure
 
 ```
-web-site/
+public/
 ├── index.html              # Main HTML file
 ├── styles.css              # CSS styles
 ├── script.js               # JavaScript functionality
