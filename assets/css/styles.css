@@ -408,12 +408,14 @@ body {
 .timeline-period {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #667eea;
+    color: #666;
     margin-bottom: 0.5rem;
-    background: rgba(102, 126, 234, 0.1);
+    background: #f0f0f0;
     padding: 0.3rem 1rem;
     border-radius: 20px;
     display: inline-block;
+    pointer-events: none;
+    cursor: default;
 }
 
 .timeline-title {
@@ -504,15 +506,9 @@ body {
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
     border: 1px solid rgba(102, 126, 234, 0.2);
-}
-
-.skill-item:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    pointer-events: none;
+    cursor: default;
 }
 
 /* Accomplishments Section */
